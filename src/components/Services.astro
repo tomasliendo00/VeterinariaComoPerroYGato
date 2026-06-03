@@ -1,0 +1,53 @@
+---
+const services = [
+  {
+    icon: 'medical_services',
+    title: 'Consulta Clínica',
+    description: 'Exámenes generales preventivos y diagnósticos realizados por especialistas dedicados.',
+    accent: false,
+  },
+  {
+    icon: 'vaccines',
+    title: 'Vacunación',
+    description: 'Planes sanitarios completos para proteger a tu mascota contra las principales enfermedades.',
+    accent: false,
+  },
+  {
+    icon: 'medical_mask',
+    title: 'Cirugía',
+    description: 'Quirófano totalmente equipado y monitoreo constante para máxima seguridad quirúrgica.',
+    accent: false,
+  },
+  {
+    icon: 'content_cut',
+    title: 'Peluquería',
+    description: 'Estética canina y felina con productos hipoalergénicos y trato paciente.',
+    accent: false,
+  },
+  {
+    icon: 'emergency',
+    title: 'Urgencias',
+    description: 'Estamos disponibles para casos críticos que requieren atención inmediata y especializada.',
+    accent: true,
+  },
+];
+---
+
+<section id="servicios" class="py-20 px-6 md:px-16 bg-surface">
+  <div class="text-center mb-12">
+    <h2 class="font-display font-bold text-3xl md:text-4xl text-on-surface mb-3">Nuestros Servicios</h2>
+    <div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {services.map(({ icon, title, description, accent }) => (
+      <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+        <div class={`w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform ${accent ? 'bg-error-container text-on-error-container' : 'bg-secondary-container text-on-secondary-container'}`}>
+          <span class="material-symbols-outlined text-3xl">{icon}</span>
+        </div>
+        <h3 class={`font-display font-semibold text-2xl mb-3 ${accent ? 'text-error' : 'text-on-surface'}`}>{title}</h3>
+        <p class="text-on-surface-variant">{description}</p>
+      </div>
+    ))}
+  </div>
+</section>

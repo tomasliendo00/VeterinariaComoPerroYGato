@@ -1,0 +1,27 @@
+---
+const schedule = [
+  { days: 'Lunes a Viernes', hours: '9 – 13 / 17 – 20', closed: false },
+  { days: 'Sábados',         hours: '9 – 13',                  closed: false },
+  { days: 'Domingos',        hours: 'Cerrado',                        closed: true  },
+];
+---
+
+<section id="horarios" class="py-20 px-6 md:px-16 bg-primary text-on-primary">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1 text-center md:text-left">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Horarios de Atención</h2>
+      <p class="opacity-80 text-lg">Visitanos en nuestra sede central o agendá tu visita a domicilio.</p>
+    </div>
+
+    <div class="flex-1 w-full">
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4">
+        {schedule.map(({ days, hours, closed }, i) => (
+          <div class={`flex justify-between items-center ${i < schedule.length - 1 ? 'border-b border-white/20 pb-4' : ''}`}>
+            <span class="text-sm font-semibold uppercase tracking-wider">{days}</span>
+            <span class={`font-bold ${closed ? 'opacity-60' : ''}`}>{hours}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

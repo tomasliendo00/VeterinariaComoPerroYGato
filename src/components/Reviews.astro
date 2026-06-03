@@ -1,0 +1,87 @@
+---
+const reviews = [
+  {
+    name: 'José Aldo Sorbera',
+    stars: 5,
+    text: 'Excelente atención, muy profesionales, luego de diagnosticar y medicar hicieron el seguimiento y controles durante 3 días sin ningún costo adicional. Muy recomendable.',
+  },
+  {
+    name: 'Kevin Picco',
+    stars: 5,
+    text: 'Muy buena atención y excelentes profesionales, me han salvado una perrita, han asistido muchos de nuestros perros. Es nuestra veterinaria de confianza.',
+  },
+  {
+    name: 'Favio Raúl Martín',
+    stars: 5,
+    text: 'Muy buena atención y super profesionales!!!',
+  },
+  {
+    name: 'Liliana Ahivar',
+    stars: 5,
+    text: 'Cuentan con un equipo de veterinarios importante y el cuidado y atención con los animales es única.',
+  },
+  {
+    name: 'Maximiliano Ledesma',
+    stars: 5,
+    text: 'El lugar se presenta bien distribuido y ordenado. Los espacios son convenientes. La atención es muy buena, de gran interés por la mascota. No presentan inconvenientes para diversos medios de pago, cuentan con buen equipamiento e incluyen venta de alimentos.',
+  },
+  {
+    name: 'José Luis Vargas Antezana',
+    stars: 5,
+    text: 'El personal te atiende con mucha cortesía y rapidez de acuerdo a tu requerimiento.',
+  },
+];
+
+// Duplicamos las cards para el loop infinito
+const allReviews = [...reviews, ...reviews];
+---
+
+<section id="resenas" class="py-20 bg-surface overflow-hidden">
+  <div class="px-6 md:px-16 flex flex-col md:flex-row justify-between items-end mb-12">
+    <div>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-on-surface mb-2">Lo que dicen nuestros clientes</h2>
+      <p class="text-on-surface-variant">Confianza construida pelito a pelito.</p>
+    </div>
+    <a href="#" class="text-primary font-semibold text-sm hover:underline mt-4 md:mt-0 flex items-center gap-1">
+      Ver todas las reseñas en Google
+      <span class="material-symbols-outlined text-base">open_in_new</span>
+    </a>
+  </div>
+
+  <!-- Carrusel -->
+  <div class="relative">
+    <!-- Fade izquierda -->
+    <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-surface to-transparent pointer-events-none"></div>
+    <!-- Fade derecha -->
+    <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-surface to-transparent pointer-events-none"></div>
+
+    <div class="carousel-track flex gap-6 w-max">
+      {allReviews.map(({ name, text, stars }) => (
+        <div class="w-80 flex-shrink-0 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex flex-col">
+          <div class="flex text-yellow-500 mb-4">
+            {Array.from({ length: stars }).map(() => (
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            ))}
+          </div>
+          <p class="text-on-surface italic mb-6 flex-grow">"{text}"</p>
+          <p class="font-semibold text-on-surface">{name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .carousel-track {
+    animation: scroll-left 30s linear infinite;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>

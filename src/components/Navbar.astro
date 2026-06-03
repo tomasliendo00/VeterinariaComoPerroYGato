@@ -1,0 +1,70 @@
+---
+const links = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#resenas', label: 'Reseñas' },
+  { href: '#horarios', label: 'Horarios' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<div class="bg-[#ff9800] text-white text-center py-2 px-4 text-xs font-semibold tracking-wide">
+  <span class="material-symbols-outlined text-base align-middle mr-1">emergency</span>
+  Atención de Urgencias 24hs: Llamar al [TELÉFONO]
+</div>
+
+<nav id="navbar" class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="flex justify-between items-center w-full px-4 md:px-16 py-2">
+    <a href="#" aria-label="Como Perro y Gato - Inicio">
+      <img src="/logo.jpeg" alt="Como Perro y Gato" class="h-14 w-auto object-contain" />
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      {links.map(({ href, label }) => (
+        <a href={href} class="text-sm font-semibold tracking-wide text-on-surface-variant hover:text-primary transition-colors">
+          {label}
+        </a>
+      ))}
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="#contacto" class="bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg active:scale-95 transition-all">
+        Pedir turno
+      </a>
+      <button id="menu-btn" class="md:hidden p-2 text-primary" aria-label="Abrir menú">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="mobile-drawer" class="fixed inset-0 bg-surface z-[60] -translate-x-full transition-transform duration-300 md:hidden">
+  <div class="p-6 flex flex-col h-full">
+    <div class="flex justify-between items-center mb-10">
+      <img src="/logo.jpeg" alt="Como Perro y Gato" class="h-12 w-auto object-contain" />
+      <button id="close-menu" class="p-2 text-on-surface" aria-label="Cerrar menú">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-6">
+      {links.map(({ href, label }) => (
+        <a href={href} class="drawer-link text-2xl font-bold text-on-surface-variant hover:text-primary transition-colors">
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-menu');
+  const drawer = document.getElementById('mobile-drawer');
+
+  menuBtn?.addEventListener('click', () => drawer?.classList.remove('-translate-x-full'));
+  closeBtn?.addEventListener('click', () => drawer?.classList.add('-translate-x-full'));
+  document.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', () => drawer?.classList.add('-translate-x-full'));
+  });
+</script>
