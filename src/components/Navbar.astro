@@ -15,21 +15,29 @@ const links = [
 </div>
 
 <nav id="navbar" class="sticky top-0 z-50 bg-white shadow-sm">
-  <div class="flex justify-between items-center w-full px-4 md:px-16 py-2">
+  <div class="flex items-center w-full px-4 md:px-16 py-2">
+    <!-- Logo: ancho natural, izquierda -->
     <a href="#" aria-label="Como Perro y Gato - Inicio">
       <img src={logoSrc.src} alt="Como Perro y Gato" class="h-14 w-auto object-contain" />
     </a>
 
-    <div class="hidden md:flex items-center gap-8">
-      {links.map(({ href, label }) => (
-        <a href={href} class="text-sm font-semibold tracking-wide text-on-surface-variant hover:text-primary transition-colors">
-          {label}
-        </a>
-      ))}
+    <!-- Centro: ocupa todo el espacio entre logo y hamburguesa -->
+    <div class="flex-1 flex justify-center items-center">
+      <div class="hidden md:flex items-center gap-8">
+        {links.map(({ href, label }) => (
+          <a href={href} class="text-sm font-semibold tracking-wide text-on-surface-variant hover:text-primary transition-colors">
+            {label}
+          </a>
+        ))}
+      </div>
+      <a href="https://wa.me/[TELÉFONO_WA]" target="_blank" rel="noopener noreferrer" class="md:hidden bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg active:scale-95 transition-all whitespace-nowrap">
+        Pedir turno
+      </a>
     </div>
 
+    <!-- Derecha: ancho natural -->
     <div class="flex items-center gap-3">
-      <a href="https://wa.me/[TELÉFONO_WA]" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg active:scale-95 transition-all">
+      <a href="https://wa.me/[TELÉFONO_WA]" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold hover:shadow-lg active:scale-95 transition-all whitespace-nowrap">
         Pedir turno
       </a>
       <button id="menu-btn" class="md:hidden p-2 text-primary" aria-label="Abrir menú">
