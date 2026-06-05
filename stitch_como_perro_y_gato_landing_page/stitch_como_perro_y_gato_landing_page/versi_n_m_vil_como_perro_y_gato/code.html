@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#efeded",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "on-secondary-fixed-variant": "#00504a",
+                    "surface-container-high": "#eae8e7",
+                    "secondary": "#006a62",
+                    "surface-dim": "#dbd9d9",
+                    "surface-tint": "#02629e",
+                    "surface-container-low": "#f5f3f3",
+                    "inverse-primary": "#9acbff",
+                    "tertiary-fixed-dim": "#ffb86f",
+                    "tertiary-container": "#985900",
+                    "on-surface": "#1b1c1c",
+                    "inverse-on-surface": "#f2f0f0",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#cfe5ff",
+                    "on-secondary-fixed": "#00201d",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-primary-fixed": "#001d34",
+                    "background": "#fbf9f8",
+                    "surface": "#fbf9f8",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#ffdcbe",
+                    "outline-variant": "#c0c7d1",
+                    "primary-fixed-dim": "#9acbff",
+                    "on-surface-variant": "#414750",
+                    "on-background": "#1b1c1c",
+                    "on-primary-container": "#d9e9ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#9ff1e7",
+                    "secondary-container": "#9cefe4",
+                    "on-tertiary-container": "#ffe3cb",
+                    "tertiary": "#764400",
+                    "surface-variant": "#e4e2e2",
+                    "on-tertiary-fixed": "#2c1600",
+                    "secondary-fixed-dim": "#83d5cb",
+                    "on-primary-fixed-variant": "#004a78",
+                    "surface-bright": "#fbf9f8",
+                    "primary": "#005387",
+                    "primary-container": "#1b6ca8",
+                    "outline": "#717881",
+                    "on-secondary-container": "#0a6f66"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "xl": "80px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "body-sm": ["Be Vietnam Pro"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .glass-nav { background: rgba(251, 249, 248, 0.8); backdrop-filter: blur(12px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+<!-- Urgency Banner -->
+<div class="bg-[#FF9800] text-white text-center py-2 px-4 font-label-sm text-label-sm">
+        Emergencias 24hs: <span class="font-bold underline">0800-MASCOTA</span>
+</div>
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 glass-nav shadow-sm">
+<nav class="flex justify-between items-center px-margin-mobile py-4 max-w-full mx-auto">
+<div class="flex items-center gap-3">
+<button class="p-2 -ml-2 text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">Como Perro y Gato</h1>
+</div>
+<a class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md active:scale-95 transition-transform duration-150" href="#">
+                Pedir turno
+            </a>
+</nav>
+<!-- Mobile Drawer Placeholder (JS toggled) -->
+<div class="fixed inset-0 bg-surface z-[60] translate-x-[-100%] transition-transform duration-300" id="mobile-drawer">
+<div class="p-margin-mobile flex flex-col h-full">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-md text-headline-md font-bold text-primary">Menú</span>
+<button class="p-2 text-on-surface" id="close-menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<a class="font-headline-md text-headline-md text-on-surface-variant active:text-primary" href="#">Servicios</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant active:text-primary" href="#">Nosotros</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant active:text-primary" href="#">Reseñas</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant active:text-primary" href="#">Horarios</a>
+<a class="font-headline-md text-headline-md text-on-surface-variant active:text-primary border-b-2 border-primary pb-1 self-start text-primary" href="#">Contacto</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="px-margin-mobile pt-lg pb-xl flex flex-col items-center text-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden mb-8 shadow-xl relative">
+<img class="w-full h-full object-cover" data-alt="A warm, emotionally resonant photo of a golden retriever and a calico cat sitting peacefully together on a soft cream-colored rug. The lighting is golden-hour sunlight streaming through a window, creating a serene and safe atmosphere. The background is a blurred, high-end veterinary clinic interior with teal and white accents. This image conveys professional care and a loving environment for pets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIAKVVxaMuzmAKlz9idwE16pP9U9hL-Bm31k0DqNbqZDVOdDZ18oIudB2saNumDUjkD-djnYCHa1ILEqopmIElXodrwrnA84tcVUZNw4tr-bTXAe5I7CI0spFmazxocPqPPqnqMsz0XM3uKm46kHDNd4quFb6JLYZECtITG4tGxubjq62jrva-cuJQoUTqA0nC2z-iN8xlEWGdJL1dCZIEm5JuVAHeaOOT59A-0kGHqi5wQjhmBSgCSSwnS-HtBEhQDNJ5sbLvNVV9"/>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-4 leading-tight">Como Perro y Gato</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-sm">Cuidado profesional y amoroso diseñado para el bienestar integral de tus mejores amigos.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md text-headline-md shadow-lg active:scale-95 transition-all">
+            Pedir turno ahora
+        </button>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container-low py-xl px-margin-mobile">
+<div class="mb-10 text-center">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">Nuestro Trabajo</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-4">Nuestros Servicios</h3>
+</div>
+<div class="flex flex-col gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30 active:shadow-md transition-shadow">
+<div class="bg-secondary/10 text-secondary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">stethoscope</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Consulta Clínica</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Diagnóstico integral y seguimiento personalizado para mantener la salud de tu mascota.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30">
+<div class="bg-secondary/10 text-secondary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">vaccines</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Vacunación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Planes preventivos adaptados a cada etapa de vida y especie.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30">
+<div class="bg-secondary/10 text-secondary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">medical_mask</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Cirugía</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Quirófano equipado con tecnología de punta y monitoreo constante.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/30">
+<div class="bg-secondary/10 text-secondary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Peluquería</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Estética canina y felina con productos hipoalergénicos y trato delicado.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl px-margin-mobile flex flex-col gap-10">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A professional female veterinarian with a warm smile, wearing a clean teal scrub top, gently examining a small dog in a bright, modern clinical setting. The background features organized medical shelves and soft-focus greenery, emphasizing a clean yet welcoming professional environment. The lighting is bright and even, highlighting the clinic's trust-based aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACGFxYke1352roDwVNDwihYIBDTwrEisAhJxDLL34_OzYXmYTruYyJxogPwrp9KI18GpEKUytSE546WaRcPj6CNvSD15EUaEBhTysevWLFPDCL2naOub59uUirHVZQaRJu__lt55N9T8uzAC-fz8QWK0is9l6tyhKTcyapPeP27djrJ1MMwvd-vJ8c6q46_0g95l5vktMHTyH4dFPwKBxfzsHJzWy8yIPK4OHoKl5-foGw5OCVRewoHCY0uDqqzNpnODXx4Sdxr2Pw"/>
+</div>
+<div class="space-y-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Quiénes Somos</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                En <strong>Como Perro y Gato</strong>, entendemos que tu mascota es parte de tu familia. Llevamos más de 10 años brindando excelencia médica en Córdoba, combinando tecnología de vanguardia con un trato humano y compasivo.
+            </p>
+<div class="flex items-center gap-4 p-4 bg-surface-container-high rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl">verified_user</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Profesionales Matriculados</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Garantía de calidad y ética profesional.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="bg-primary text-on-primary py-xl px-margin-mobile overflow-hidden">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-10">Lo que dicen nuestros clientes</h3>
+<div class="flex flex-col gap-6">
+<!-- Review 1 -->
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+<div class="flex items-center gap-1 text-tertiary-fixed mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4">"Excelente atención. Traje a mi gato por una urgencia y el trato fue impecable. Muy profesionales y cariñosos."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold">ML</div>
+<p class="font-label-md text-label-md font-bold">María Luz García</p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+<div class="flex items-center gap-1 text-tertiary-fixed mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic mb-4">"La mejor peluquería canina de la zona. Mi perro sale feliz y siempre queda hermoso. Super recomendados."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center font-bold">JR</div>
+<p class="font-label-md text-label-md font-bold">Juan Rodríguez</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hours Section -->
+<section class="py-xl px-margin-mobile">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant/30 overflow-hidden">
+<div class="bg-primary-container p-4">
+<h3 class="font-headline-md text-headline-md text-on-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined">schedule</span>
+                    Horarios de Atención
+                </h3>
+</div>
+<div class="p-6">
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-3 border-b border-outline-variant">
+<span class="font-label-md text-label-md text-on-surface">Lunes a Viernes</span>
+<span class="font-body-md text-body-md text-primary font-bold">09:00 - 20:00</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b border-outline-variant">
+<span class="font-label-md text-label-md text-on-surface">Sábados</span>
+<span class="font-body-md text-body-md text-primary font-bold">09:00 - 13:00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface">Domingos</span>
+<span class="font-body-md text-body-md text-error font-medium">Cerrado</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg text-center font-label-sm text-label-sm">
+                    ⚠️ Urgencias fuera de horario llamar al 0800-MASCOTA
+                </div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-margin-mobile bg-surface-container-high">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-8">Contacto</h3>
+<div class="flex flex-col gap-8">
+<form class="space-y-4 bg-surface p-6 rounded-2xl shadow-sm">
+<div>
+<label class="font-label-sm text-label-sm text-outline mb-1 block">Nombre Completo</label>
+<input class="w-full h-12 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary" placeholder="Ej: Ana Pérez" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline mb-1 block">Tu Mascota</label>
+<input class="w-full h-12 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary" placeholder="Ej: Rocky (Perro)" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline mb-1 block">Mensaje</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary h-32" placeholder="¿En qué podemos ayudarte?"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold tracking-wide" type="submit">Enviar Mensaje</button>
+</form>
+<a class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-xl font-bold shadow-md active:scale-95 transition-transform" href="https://wa.me/549351000000">
+<span class="material-symbols-outlined">chat</span>
+                Chat por WhatsApp
+            </a>
+<div class="rounded-2xl overflow-hidden shadow-lg h-64 relative border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist digital map graphic showing the central area of Córdoba city, Argentina. The map style is stylized with the brand's teal and blue color palette, featuring a prominent location pin icon representing the veterinary clinic's position. The look is modern, high-contrast, and professional." data-location="Córdoba, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEpX91c9E3vzsk4Exn5100yfOLjhL2rhCJaxqPjYoaHNkXZEvL3rXfc7tYqHULK8dAGdkNwuYGdRRI4cXNC2FXPO1--cDV85Fui1imxlbAc2ep1DrzfKYYbxtn2WFM8eGHudo1p5BMLH9L_LMk0gJeK7WlHBOUVKJPxge-aR7eAdogRn1Gds4ALHDGLVOxabIdvdukKFHAuBh945XMbvGfgD2F0c0cIyy0oQfsaPUOh02eqssoceFqvjKvx_LWrPUijNnaj88ylq5K"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md">
+<p class="font-label-sm text-label-sm text-primary font-bold">Av. Rafael Núñez 4500, Córdoba</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface py-xl px-margin-mobile">
+<div class="flex flex-col items-center text-center gap-10">
+<div>
+<h4 class="font-headline-md text-headline-md font-extrabold text-primary-fixed-dim mb-2">Como Perro y Gato</h4>
+<p class="font-body-sm text-body-sm text-surface-variant max-w-xs">Profesionales de la salud animal comprometidos con el bienestar de tu mascota.</p>
+</div>
+<div class="flex gap-6">
+<a class="w-12 h-12 rounded-full border border-surface-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-surface-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-surface-variant flex items-center justify-center hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+<div class="w-full h-px bg-surface-variant/20"></div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="font-label-sm text-label-sm hover:text-primary-fixed-dim" href="#">Nosotros</a>
+<a class="font-label-sm text-label-sm hover:text-primary-fixed-dim" href="#">Servicios</a>
+<a class="font-label-sm text-label-sm hover:text-primary-fixed-dim" href="#">Horarios</a>
+<a class="font-label-sm text-label-sm hover:text-primary-fixed-dim" href="#">Privacidad</a>
+</div>
+<p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Como Perro y Gato. Córdoba, Argentina.</p>
+</div>
+</div>
+</footer>
+<!-- FAB for Quick Turno (Contextual only on main content) -->
+<a class="fixed bottom-6 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-50 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-3xl">calendar_month</span>
+</a>
+<script>
+        // Simple Navigation Drawer Interaction
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu');
+        const drawer = document.getElementById('mobile-drawer');
+
+        menuBtn.addEventListener('click', () => {
+            drawer.style.transform = 'translateX(0)';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            drawer.style.transform = 'translateX(-100%)';
+        });
+
+        // Close drawer when clicking a link
+        const links = drawer.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                drawer.style.transform = 'translateX(-100%)';
+            });
+        });
+    </script>
+</body></html>

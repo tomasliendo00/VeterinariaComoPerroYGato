@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Como Perro y Gato | Clínica Veterinaria en Córdoba</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-low": "#f5f3f3",
+                "primary-fixed-dim": "#9acbff",
+                "on-primary-fixed": "#001d34",
+                "on-secondary-fixed-variant": "#00504a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1b6ca8",
+                "outline": "#717881",
+                "background": "#fbf9f8",
+                "on-error-container": "#93000a",
+                "tertiary-container": "#985900",
+                "surface-bright": "#fbf9f8",
+                "on-error": "#ffffff",
+                "outline-variant": "#c0c7d1",
+                "inverse-primary": "#9acbff",
+                "inverse-surface": "#303030",
+                "on-secondary-fixed": "#00201d",
+                "inverse-on-surface": "#f2f0f0",
+                "on-background": "#1b1c1c",
+                "on-tertiary-fixed-variant": "#693c00",
+                "surface-tint": "#02629e",
+                "on-tertiary-container": "#ffe3cb",
+                "surface-variant": "#e4e2e2",
+                "surface-dim": "#dbd9d9",
+                "surface-container": "#efeded",
+                "on-secondary": "#ffffff",
+                "surface": "#fbf9f8",
+                "tertiary-fixed-dim": "#ffb86f",
+                "secondary-container": "#9cefe4",
+                "error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#004a78",
+                "on-tertiary": "#ffffff",
+                "secondary": "#006a62",
+                "surface-container-highest": "#e4e2e2",
+                "tertiary": "#764400",
+                "on-surface-variant": "#414750",
+                "primary": "#005387",
+                "secondary-fixed-dim": "#83d5cb",
+                "on-primary-container": "#d9e9ff",
+                "on-surface": "#1b1c1c",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffdcbe",
+                "surface-container-high": "#eae8e7",
+                "secondary-fixed": "#9ff1e7",
+                "primary-fixed": "#cfe5ff",
+                "error": "#ba1a1a",
+                "on-tertiary-fixed": "#2c1600",
+                "on-secondary-container": "#0a6f66"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "xl": "80px",
+                "xs": "4px",
+                "margin-desktop": "64px",
+                "sm": "12px",
+                "gutter": "24px",
+                "md": "24px",
+                "base": "8px",
+                "lg": "48px",
+                "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                "label-sm": ["Be Vietnam Pro"],
+                "body-sm": ["Be Vietnam Pro"],
+                "headline-lg": ["Plus Jakarta Sans"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "label-md": ["Be Vietnam Pro"],
+                "headline-lg-mobile": ["Plus Jakarta Sans"],
+                "body-md": ["Be Vietnam Pro"],
+                "body-lg": ["Be Vietnam Pro"],
+                "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- Urgency Banner -->
+<div class="bg-[#ff9800] text-on-tertiary-fixed text-center py-2 px-4 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-1">emergency</span>
+        Atención de Urgencias 24hs: Llamar al +54 351 123 4567
+    </div>
+<!-- Navigation -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/80 glass-nav shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-full mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                Como Perro y Gato
+            </div>
+<div class="hidden md:flex items-center space-gap-gutter gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#nosotros">Nosotros</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#resenas">Reseñas</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#horarios">Horarios</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-md text-label-md hover:shadow-lg active:scale-95 transition-all">
+                Pedir turno
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A heartwarming, high-resolution professional photograph of a golden retriever dog and a grey tabby cat sitting closely together on a soft, light-colored rug in a bright, airy modern living room. The scene is bathed in warm, natural sunlight streaming through a large window, creating a soft and inviting atmosphere. The overall aesthetic is clean, professional, and full of warmth, perfectly aligning with the veterinary clinic's caring identity and soft color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrrPmTmAUjp7Y8DMnRDl3CaYGeOFpjefKq-E1MTBYQT-eohZ7_mHyXh6o_u-5XOVrQuF2RWaNvSY3SAz857t7H1ZcnoXlxOobYeLbovh3xmI4yqFLNU2JOBl3CC9txY5JIcqnj8tcT1LWEuDCBMzUSYDNomFGQIeJixnVJDqvu8d4yRMlHBB8989oEVng97Wd_g_VMC6rI5AmUT5NJKiiNftXPLDN4Bj3GpS-7PMLxWNUIzKi6mQAeA9R9WTA0WylsIPl_XuE2NZUI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4 leading-tight">
+                Como Perro y Gato
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">
+                Tu mascota, nuestra pasión. Brindamos cuidado médico de excelencia con el amor y la calidez que ellos merecen.
+            </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:elevation-2 transition-all">
+                    Pedir turno
+                </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary/5 transition-all">
+                    Ver Servicios
+                </button>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl px-margin-desktop bg-surface" id="servicios">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Nuestros Servicios</h2>
+<div class="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Consulta Clínica</h3>
+<p class="text-on-surface-variant font-body-md">Exámenes generales preventivos y diagnósticos realizados por especialistas dedicados.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">vaccines</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Vacunación</h3>
+<p class="text-on-surface-variant font-body-md">Planes sanitarios completos para proteger a tu mascota contra las principales enfermedades.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">medical_mask</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Cirugía</h3>
+<p class="text-on-surface-variant font-body-md">Quirófano totalmente equipado y monitoreo constante para máxima seguridad quirúrgica.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Peluquería</h3>
+<p class="text-on-surface-variant font-body-md">Estética canina y felina con productos hipoalergénicos y trato paciente.</p>
+</div>
+<!-- Service Card 5 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 bg-error-container text-on-error-container rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">emergency</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-error">Urgencias</h3>
+<p class="text-on-surface-variant font-body-md">Estamos disponibles para casos críticos que requieren atención inmediata y especializada.</p>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-xl px-margin-desktop bg-surface-container-low overflow-hidden" id="nosotros">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Quiénes Somos</h2>
+<div class="space-y-4 font-body-lg text-on-surface-variant">
+<p>En "Como Perro y Gato", nacimos en el corazón de Córdoba con un propósito claro: redefinir la experiencia veterinaria a través de la empatía y la tecnología de vanguardia.</p>
+<p>Nuestra historia comenzó hace más de 15 años como un pequeño consultorio barrial. Hoy, somos un centro de referencia en la ciudad, manteniendo los mismos valores de cercanía y profesionalismo que nos vieron crecer.</p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="border-l-4 border-secondary pl-4">
+<span class="block font-bold text-headline-md text-primary">15+</span>
+<span class="text-body-sm text-outline">Años de Trayectoria</span>
+</div>
+<div class="border-l-4 border-secondary pl-4">
+<span class="block font-bold text-headline-md text-primary">10k+</span>
+<span class="text-body-sm text-outline">Mascotas Atendidas</span>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-[500px] object-cover" data-alt="An interior shot of a cutting-edge, ultra-modern veterinary clinic reception and examination area. The design features soft, rounded architectural lines, light wood accents, and a calming color palette of soft teals and warm whites. High-end medical equipment is visible but arranged in a non-threatening, organized manner. The lighting is soft and diffused, creating a serene, professional environment that inspires trust and tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBanqHt5lCAC7HWxTNKJYzMCrktgrz4KZG4O_mQzRClVEa8wygSXJkfOVS9aoxJGg90H6fWNZa4pAABVdlkTKQLSvPLjN7e50Lig0cKz3fYkBc9aeHxFJkrMTug2cnr45YQoR1h2IDkwd4QAtyUdf9ZdcIV4vkjDrz8TfQjEZruvsPDzFfooAwPVtYe6P3uotZ1RIyUSQop4jAGMr1K3DnQPxMsQU8r1uz5AB2ztL7Qt6MSIo8nyDia2gFiFm_LeBMOwWa7nwpfOpyV"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Clínica Certificada</p>
+<p class="text-sm text-outline">Estándares Internacionales</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-xl px-margin-desktop bg-surface" id="resenas">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Lo que dicen nuestros clientes</h2>
+<p class="text-on-surface-variant">Confianza construida pelito a pelito.</p>
+</div>
+<a class="text-primary font-label-md hover:underline mt-4 md:mt-0 flex items-center gap-2" href="#">
+                Ver todas las reseñas en Google
+                <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6 flex-grow">"Excelente atención. Operaron a mi gatita y estuvieron pendientes de su evolución todo el tiempo. Son muy amorosos."</p>
+<div>
+<p class="font-bold text-on-surface">María Luz Gómez</p>
+<p class="text-label-sm text-outline">15 Octubre, 2023</p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6 flex-grow">"La peluquería es de 10. Mi perro suele ser muy miedoso y acá sale súper tranquilo y hermoso. Muy recomendables."</p>
+<div>
+<p class="font-bold text-on-surface">Ricardo Martínez</p>
+<p class="text-label-sm text-outline">2 Noviembre, 2023</p>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex text-yellow-500 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6 flex-grow">"Los mejores profesionales de Córdoba. Siempre aciertan con el diagnóstico y no te cobran de más. Confío plenamente."</p>
+<div>
+<p class="font-bold text-on-surface">Sofía Bianchi</p>
+<p class="text-label-sm text-outline">12 Diciembre, 2023</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hours Section -->
+<section class="py-xl px-margin-desktop bg-primary text-on-primary" id="horarios">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg mb-4">Horarios de Atención</h2>
+<p class="opacity-80 font-body-lg">Visitanos en nuestra sede central o agendá tu visita a domicilio.</p>
+</div>
+<div class="flex-1 w-full">
+<div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 space-y-4">
+<div class="flex justify-between items-center border-b border-white/20 pb-4">
+<span class="font-label-md uppercase tracking-wider">Lunes a Viernes</span>
+<span class="font-bold">9:00 – 20:00</span>
+</div>
+<div class="flex justify-between items-center border-b border-white/20 pb-4">
+<span class="font-label-md uppercase tracking-wider">Sábados</span>
+<span class="font-bold">9:00 – 14:00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md uppercase tracking-wider">Domingos</span>
+<span class="text-on-primary/60">Cerrado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location Section -->
+<section class="py-xl px-margin-desktop bg-background" id="contacto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Contacto y Ubicación</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<!-- Form -->
+<div class="bg-surface-container-low p-8 rounded-2xl">
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">Nombre Completo</label>
+<input class="w-full bg-surface border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all shadow-sm" placeholder="Tu nombre" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">Email</label>
+<input class="w-full bg-surface border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all shadow-sm" placeholder="tu@email.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">Mensaje</label>
+<textarea class="w-full bg-surface border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all shadow-sm" placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md hover:bg-primary-container transition-colors shadow-lg">
+                        Enviar mensaje
+                    </button>
+<a class="w-full bg-[#25D366] text-white py-4 rounded-xl font-label-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg mt-4" href="https://wa.me/543511234567" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                        Escribinos por WhatsApp
+                    </a>
+</form>
+</div>
+<!-- Map -->
+<div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl border border-outline-variant">
+<div class="w-full h-full bg-surface-container-highest relative flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50" data-alt="A clean, minimalist digital map visual focusing on the urban area of Córdoba, Argentina. The map style is stylized for a UI application, using soft teals, greys, and primary blues to highlight the clinic's location. A large, friendly circular marker with a paw print icon indicates the precise location of the 'Como Perro y Gato' clinic within a peaceful neighborhood. The lighting is bright and modern, avoiding dark shadows and focusing on clear navigation and accessibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrXF-Wsx17F8F3lS9FCN_ZUV5eMUIQ7IjhQfjK2TgIMne-8hNGTZne4JwEQ-UwZjfxzT1Nd2_Lc_RVLKL5xmIs6VXRRVLNEhWDWXz93SqnZU1vnC8_9Lg1gAgdyDouULImGZGlY0T2pzDnj3QrDrQ3nGxh0h24KtYyhGq1w7kAbPWIJHVmdT4VfOYC8qgXGdHdUoeuo1axc-fvoBPv53jr2hQoBWXVdORswkfnnXn8bw9va2BHoOxn_1Dzsg3BZzqS859-0IISAYox"/>
+<div class="relative z-10 text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl max-w-xs mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">location_on</span>
+<h4 class="font-headline-md mb-2">Córdoba Capital</h4>
+<p class="text-body-sm text-outline mb-4">Nueva Córdoba, X5000 Córdoba, Argentina</p>
+<a class="text-primary font-bold hover:underline" href="https://maps.google.com?q=Cordoba,Argentina" target="_blank">Abrir en Google Maps</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-xl px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xl">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6">
+                    Como Perro y Gato
+                </div>
+<p class="text-on-surface-variant font-body-sm mb-6">
+                    Cuidado profesional y amoroso para tu mascota en la ciudad de Córdoba.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-primary mb-6 uppercase">Explorar</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#servicios">Servicios</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#nosotros">Nosotros</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#resenas">Reseñas</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm" href="#horarios">Horarios</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-primary mb-6 uppercase">Contacto</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+<span class="text-body-sm text-on-surface-variant">Nueva Córdoba, CP 5000</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">phone</span>
+<span class="text-body-sm text-on-surface-variant">+54 351 123 4567</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<span class="text-body-sm text-on-surface-variant">info@perroygato.com.ar</span>
+</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-md text-primary mb-6 uppercase">Newsletter</h4>
+<p class="text-body-sm text-on-surface-variant mb-4">Recibí consejos de salud para tu mascota.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-low border-none rounded-lg p-3 text-sm flex-grow focus:ring-1 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-3 rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-base flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm text-outline">© 2024 Como Perro y Gato. Cuidado profesional y amoroso para tu mascota.</p>
+<div class="flex gap-6">
+<a class="text-label-sm text-outline hover:text-primary" href="#">Políitica de Privacidad</a>
+<a class="text-label-sm text-outline hover:text-primary" href="#">Términos y Condiciones</a>
+</div>
+</div>
+</footer>
+<!-- FAB for WhatsApp -->
+<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all" href="https://wa.me/543511234567" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.4 8.2-9.7 2.8-3.3 3.7-5.6 5.6-9.2 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+</a>
+<script>
+        // Simple scroll behavior for navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.remove('text-on-surface-variant');
+                    link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>
